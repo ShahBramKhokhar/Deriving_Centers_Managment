@@ -1,0 +1,93 @@
+<section class="content-header">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-6">
+              <h1>{{ "Fees Detail" | localize }}</h1>
+          </div>
+          <!-- <div class="col-6 text-right">
+              <a href="javascript:;" class="btn bg-blue" (click)="showCreateOrEditRoleDialog()">
+                  <i class="fa fa-plus-square"></i> {{ "CreateCenter" | localize }}
+              </a>
+          </div> -->
+      </div>
+  </div>
+</section>
+<section class="content px-2">
+  <div class="container-fluid">
+    <div class="card">
+      <div class="card-body" id="printableDiv" #table>
+        <table class="table table-striped table-bordered" id="target-table" >
+          <thead class="bg-light">
+              <tr>
+                  <th>{{ "Student Id" | localize }}</th>
+                  <th>{{ "Total" | localize }}</th>
+                  <th>{{"Discount" | localize}}</th>
+                  <th>{{ "Paid" | localize }}</th>
+                  <th>{{"Remaining" | localize}}</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                <td>{{feesRecord.studentId}}</td>
+                <td>{{feesRecord.totalFees}}</td>
+                <td>{{feesRecord.discount}}</td>
+                <td>{{feesRecord.paid}}</td>
+                <td>{{feesRecord.remainingFees}}</td>
+
+              </tr>
+          </tbody>
+      </table>
+        <!-- <div id="printableDiv">
+
+          <div class="form-group row">
+            <label class="col-md-3 col-form-label" for="students">
+              {{ "Students" | localize }}
+            </label>
+
+            <div class="inner-addon col-md-9 left-addon">
+              {{feesRecord.studentName}}
+            </div>
+          </div>
+          <div class="form-group row ">
+            <label class="col-md-3 col-form-label" for="name">
+              {{ "Total" | localize }}
+            </label>
+            <div class="col-md-9">
+              {{feesRecord.totalFees}}
+            </div>
+          </div>
+          <div class="form-group row ">
+            <label class="col-md-3 col-form-label" for="descrtipton">
+              {{ "Discount" | localize }}
+            </label>
+            <div class="col-md-9">
+              {{feesRecord.discount}}
+            </div>
+          </div>
+          <div class="form-group row ">
+            <label class="col-md-3 col-form-label" for="descrtipton">
+              {{ "Paid" | localize }}
+            </label>
+            <div class="col-md-9">
+              {{feesRecord.paid}}
+            </div>
+          </div>
+
+          <div class="form-group row ">
+            <label class="col-md-3 col-form-label" for="remaining">
+              {{ "Remaining" | localize }}
+            </label>
+            <div class="col-md-9">
+              {{feesRecord.remainingFees}}
+            </div>
+          </div>
+        </div> -->
+
+      </div>
+      <button (click)="print()" class="btn btn-primary m-3" style="width: 100px;margin-left: auto !important;">
+
+      Print</button>
+    </div>
+  </div>
+</section>
+

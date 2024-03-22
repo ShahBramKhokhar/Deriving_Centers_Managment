@@ -1,0 +1,13 @@
+<div [@routerTransition]>
+  <div class="container-fluid">
+      <tabset>
+          <tab [heading]="'Fees Records' | localize" class="pt-3 px-2" id="tab2">
+              <app-fees-records [studentId]="studentId" ></app-fees-records>
+              <div class="row">
+                <button (click)="print()"  class="btn btn-primary m-3" style="width: 100px;margin-left: auto !important;">
+                    Print</button>
+              </div>
+          </tab>
+      </tabset>
+  </div>
+</div>

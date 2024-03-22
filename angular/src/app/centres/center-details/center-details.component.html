@@ -1,0 +1,36 @@
+<div [@routerTransition]>
+    <div class="container-fluid">
+        <tabset>
+            <tab [heading]="'Student' | localize" class="pt-3 px-2" id="tab1">
+                <app-students [centerId]="this.centerId"></app-students>
+            </tab>
+            <!-- <tab [heading]="'CenterDetail' | localize" class="pt-3 px-2" id="tab1">
+                <table class="table table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th> Name </th>
+                            <th>Created By</th>
+                            <th>Creation Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{centerDetail.name}} </td>
+                            <td>{{centerDetail.createdBy}} </td>
+                            <td>{{centerDetail.creationTime}} </td>
+                            <td>{{centerDetail.userName}}</td>
+              <td>{{centerDetail.emailAddress}} </td>
+              <td>{{centerDetail. isActive}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </tab> -->
+            <tab [heading]="'Class' | localize" class="pt-3 px-2" id="tab1">
+                <app-classes-area [centerId]="this.centerId"></app-classes-area>
+            </tab>
+            <tab [heading]="'Fees Records' | localize" class="pt-3 px-2" id="tab2">
+                <app-fees-records ></app-fees-records>
+            </tab>
+        </tabset>
+    </div>
+</div>
